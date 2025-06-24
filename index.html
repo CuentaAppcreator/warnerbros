@@ -26,7 +26,6 @@
 </head>
 <body class="relative min-h-screen bg-black text-white overflow-x-hidden">
 
-  <!-- Fondo -->
   <div class="absolute inset-0 z-0 h-[60vh] md:h-[70vh]">
     <img
       src="https://deadline.com/wp-content/uploads/2019/06/wbtvlogo.jpg"
@@ -37,10 +36,10 @@
     <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black"></div>
   </div>
 
-  <!-- Contenido -->
+
   <div class="relative z-10">
 
-    <!-- Header -->
+  
     <header id="main-header" class="pt-4 px-4 flex items-center space-x-4 text-white">
 <a href="javascript:window.history.back();" aria-label="Volver" class="text-white text-2xl">
   <i class="fas fa-chevron-left"></i>
@@ -51,33 +50,33 @@
            class="h-7 object-contain" />
       <h1 id="header-title" class="ml-4 text-xl font-normal opacity-0 whitespace-nowrap"></h1>
       <div class="flex-1"></div>
-      <!-- Recomendadas aparece solo al hacer scroll -->
+     
       <button id="header-recomendadas" class="opacity-0 transition-opacity duration-300 border border-white rounded-full px-3 py-1 text-sm flex items-center space-x-1">
         <i class="fas fa-random"></i> <span>Aleatorio</span>
       </button>
     </header>
 <main class="px-3 pb-6 pt-14">
 
-  <!-- Título y botón aleatorio -->
+
   <div class="flex justify-between items-center mb-3">
-    <h1 id="main-title" class="text-3xl font-normal">Warner Bros</h1>
+	    <h1 id="main-title" class="text-3xl font-normal">Warner Bros</h1>
     <button id="btn-recomendadas" class="border border-white rounded-full px-3 py-1 text-sm flex items-center">
       <i class="fas fa-random"></i>
     </button>
   </div>
 
-  <!-- Descripción -->
-  <p id="description" class="text-white text-base mb-4 max-w-xl leading-relaxed">
-Warner Bros Streaming integra una amplia biblioteca digital que abarca franquicias icónicas como Harry Potter, DC Comics y más, ofreciendo contenido en alta calidad, acceso multiplataforma y novedades exclusivas para una experiencia de entretenimiento sin límites.</p>
 
-  <!-- Total -->
+  <p id="description" class="text-white text-base mb-4 max-w-xl leading-relaxed">
+Warner Bros Streaming integra una amplia biblioteca digital que abarca franquicias iconicas como Harry Potter, DC Comics y mas, ofreciendo contenido en alta calidad, acceso multiplataforma y novedades exclusivas para una experiencia de entretenimiento sin limites.</p>
+
+
   <div class="flex items-center justify-center text-white text-sm mb-4 space-x-3">
     <div class="border-b border-white w-16"></div>
     <span id="contenido-total" class="whitespace-nowrap">Contenido: 0</span>
     <div class="border-b border-white w-16"></div>
   </div>
 
-  <!-- Contenedor de carteles -->
+
   <div id="posters-grid" class="grid grid-cols-3 sm:grid-cols-[repeat(auto-fit,_minmax(140px,_1fr))] gap-3 mt-3">
     <!--PEGAR CONTENIDO AQUI ABAJO-->
 <!--INICIO-->
@@ -959,7 +958,7 @@ Warner Bros Streaming integra una amplia biblioteca digital que abarca franquici
 
     observer.observe(description);
 
-    // Función para mezclar elementos aleatoriamente
+ 
     function shuffle(array) {
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -978,7 +977,7 @@ Warner Bros Streaming integra una amplia biblioteca digital que abarca franquici
     mainBtnRecomendadas.addEventListener('click', reorganizarPeliculas);
     headerBtnRecomendadas.addEventListener('click', reorganizarPeliculas);
 	
-// Mostrar el total de carteles
+
 const totalContenedor = document.getElementById('contenido-total');
 function actualizarTotalContenido() {
   const total = postersGrid.querySelectorAll('a').length;
